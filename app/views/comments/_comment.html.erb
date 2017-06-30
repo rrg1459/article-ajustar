@@ -1,0 +1,18 @@
+
+<p>
+  <strong>Autor:</strong>
+  <%= comment.commenter %>
+  <%= text_field :commenter %>
+</p>
+ 
+<p>
+  <strong>Comentario:</strong>
+  <%= comment.body %>
+  <%= text_area :commenter %>
+</p>
+
+<p>
+  <%= link_to 'Borrar Comentario', [comment.article, comment],
+               method: :delete,
+               data: { confirm: 'Esta seguro?' } %>
+</p>

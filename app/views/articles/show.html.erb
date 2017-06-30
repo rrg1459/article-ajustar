@@ -1,0 +1,22 @@
+<p>
+  <strong>Titulo:</strong>
+  <%= @article.title %>
+  <!%= f.text_field :title %>
+</p>
+ 
+<p>
+  <strong>Articulo:</strong>
+  <%= @article.text %>
+  <!%= f.text_field :text %>
+</p>
+
+<h2>Comentarios</h2>
+<%= render @article.comments %>
+
+<h2>Agrega un Comentario:</h2>
+<%= render 'comments/form' %> 
+
+ 
+<%= link_to 'Actualizar', edit_article_path(@article) %> |
+<%= link_to 'Regresar', articles_path %>
+
